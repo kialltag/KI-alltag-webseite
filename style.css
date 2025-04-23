@@ -14,10 +14,14 @@ body {
 header {
   background: #20232a;
   color: white;
-  padding: 20px;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
+}
+
+.header-hidden {
+top: -100px;
 }
 
 header h1 {
