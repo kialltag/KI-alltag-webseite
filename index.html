@@ -5,60 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KI im Alltag</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
 </head>
 <body>
   <header>
-    <h1>KI im Alltag</h1>
-    <nav>
-      <div class="menu-toggle" id="menu-toggle">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <ul id="menu" class="nav-links">
-        <li><a href="#muetter">Mütter</a></li>
-        <li><a href="#lehrer">Lehrer:innen</a></li>
-        <li><a href="#studenten">Studierende</a></li>
-        <li><a href="#business">Selbstständige</a></li>
-        <li><a href="#alltag">Alltag</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>KI im Alltag</h1>
+      <nav>
+        <div class="menu-toggle" id="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="menu">
+          <li><a href="#muetter">Mütter</a></li>
+          <li><a href="#lehrer">Lehrer:innen</a></li>
+          <li><a href="#studenten">Studierende</a></li>
+          <li><a href="#business">Selbstständige</a></li>
+          <li><a href="#alltag">Alltag</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <section class="hero" data-aos="fade-up">
-    <video autoplay loop muted id="hero-video">
+    <div class="overlay"></div>
+    <video autoplay loop muted playsinline>
       <source src="video.mp4" type="video/mp4" />
-      Dein Browser unterstützt kein Video-Tag.
     </video>
-    <h2>Smarte KI-Tools für deinen Alltag</h2>
-    <p>Effizienter leben mit künstlicher Intelligenz – egal ob im Familienleben, im Klassenzimmer oder im Büro.</p>
+    <div class="hero-text">
+      <h2>Dein smarter KI-Alltag</h2>
+      <p>Mit künstlicher Intelligenz organisierter und entspannter durchs Leben.</p>
+    </div>
   </section>
 
-  <!-- Beispielhafte Sektionen -->
+  <!-- Beispielsektionen -->
   <section id="muetter" data-aos="fade-up">
     <h2>KI für Mütter</h2>
-    <p>Alltag organisieren, gesunde Rezepte finden, Lernhilfen für Kinder – alles per Klick.</p>
+    <p>Organisieren, planen, entspannen – smarte Helfer im Familienalltag.</p>
   </section>
 
   <section id="lehrer" data-aos="fade-up">
     <h2>KI für Lehrer:innen</h2>
-    <p>Unterricht vorbereiten, Arbeitsblätter generieren, individuelle Förderung ermöglichen.</p>
+    <p>Unterrichtsideen, Feedback, Korrekturhilfe – immer einen Schritt voraus.</p>
   </section>
 
   <section id="studenten" data-aos="fade-up">
     <h2>KI für Studierende</h2>
-    <p>Zusammenfassungen, Prüfungsvorbereitung, Recherche – alles einfacher mit KI.</p>
+    <p>Zusammenfassen, lernen, reflektieren – effizient durch das Studium.</p>
   </section>
 
   <section id="business" data-aos="fade-up">
     <h2>KI für Selbstständige</h2>
-    <p>Effizientes Zeitmanagement, Marketingtexte, Kundenkommunikation automatisieren.</p>
+    <p>Marketing, Rechnungen, Organisation – dein smarter Büroassistent.</p>
   </section>
 
   <section id="alltag" data-aos="fade-up">
     <h2>KI im Alltag</h2>
-    <p>Von der To-do-Liste bis zum Einkauf – KI unterstützt dich bei allem.</p>
+    <p>Von Einkauf bis Kalender – dein digitaler Alltagsbegleiter.</p>
   </section>
 
   <footer>
@@ -67,8 +71,6 @@
 
   <script src="script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script>AOS.init();</script>
 </body>
 </html>
