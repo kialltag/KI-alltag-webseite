@@ -1,101 +1,74 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KI im Alltag</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+<body>
+  <header>
+    <h1>KI im Alltag</h1>
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul id="menu" class="nav-links">
+        <li><a href="#muetter">Mütter</a></li>
+        <li><a href="#lehrer">Lehrer:innen</a></li>
+        <li><a href="#studenten">Studierende</a></li>
+        <li><a href="#business">Selbstständige</a></li>
+        <li><a href="#alltag">Alltag</a></li>
+      </ul>
+    </nav>
+  </header>
 
-body {
-  background: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
-}
+  <section class="hero" data-aos="fade-up">
+    <video autoplay loop muted id="hero-video">
+      <source src="video.mp4" type="video/mp4" />
+      Dein Browser unterstützt kein Video-Tag.
+    </video>
+    <h2>Smarte KI-Tools für deinen Alltag</h2>
+    <p>Effizienter leben mit künstlicher Intelligenz – egal ob im Familienleben, im Klassenzimmer oder im Büro.</p>
+  </section>
 
-header {
-  background: #20232a;
-  color: white;
-  padding: 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+  <!-- Beispielhafte Sektionen -->
+  <section id="muetter" data-aos="fade-up">
+    <h2>KI für Mütter</h2>
+    <p>Alltag organisieren, gesunde Rezepte finden, Lernhilfen für Kinder – alles per Klick.</p>
+  </section>
 
-header h1 {
-  margin-bottom: 10px;
-}
+  <section id="lehrer" data-aos="fade-up">
+    <h2>KI für Lehrer:innen</h2>
+    <p>Unterricht vorbereiten, Arbeitsblätter generieren, individuelle Förderung ermöglichen.</p>
+  </section>
 
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
+  <section id="studenten" data-aos="fade-up">
+    <h2>KI für Studierende</h2>
+    <p>Zusammenfassungen, Prüfungsvorbereitung, Recherche – alles einfacher mit KI.</p>
+  </section>
 
-nav a {
-  color: #61dafb;
-  text-decoration: none;
-}
+  <section id="business" data-aos="fade-up">
+    <h2>KI für Selbstständige</h2>
+    <p>Effizientes Zeitmanagement, Marketingtexte, Kundenkommunikation automatisieren.</p>
+  </section>
 
-.hero {
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-  animation: fadeIn 2s ease-in-out;
-}
+  <section id="alltag" data-aos="fade-up">
+    <h2>KI im Alltag</h2>
+    <p>Von der To-do-Liste bis zum Einkauf – KI unterstützt dich bei allem.</p>
+  </section>
 
-.category {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 40px 20px;
-  align-items: center;
-  background: white;
-  margin: 10px 0;
-  animation: slideUp 1s ease;
-}
+  <footer>
+    <p>&copy; 2025 KI im Alltag</p>
+  </footer>
 
-.category:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.category img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  margin: 10px;
-}
-
-.category div {
-  flex: 1;
-  padding: 20px;
-}
-
-footer {
-  background: #20232a;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes slideUp {
-  from {transform: translateY(50px); opacity: 0;}
-  to {transform: translateY(0); opacity: 1;}
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .category {
-    flex-direction: column !important;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

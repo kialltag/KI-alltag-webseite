@@ -5,12 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KI im Alltag</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
   <header>
     <h1>KI im Alltag</h1>
     <nav>
-      <ul>
+      <div class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul id="menu" class="nav-links">
         <li><a href="#muetter">Mütter</a></li>
         <li><a href="#lehrer">Lehrer:innen</a></li>
         <li><a href="#studenten">Studierende</a></li>
@@ -20,49 +26,39 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" data-aos="fade-up">
+    <video autoplay loop muted id="hero-video">
+      <source src="video.mp4" type="video/mp4" />
+      Dein Browser unterstützt kein Video-Tag.
+    </video>
     <h2>Smarte KI-Tools für deinen Alltag</h2>
     <p>Effizienter leben mit künstlicher Intelligenz – egal ob im Familienleben, im Klassenzimmer oder im Büro.</p>
   </section>
 
-  <section id="muetter" class="category">
-    <img src="images/muetter.jpg" alt="KI für Mütter">
-    <div>
-      <h3>Für Mütter & Familien</h3>
-      <p>KI-Tools für Einkaufsplanung, Familienkalender oder kreative Ideen mit Kindern.</p>
-    </div>
+  <!-- Beispielhafte Sektionen -->
+  <section id="muetter" data-aos="fade-up">
+    <h2>KI für Mütter</h2>
+    <p>Alltag organisieren, gesunde Rezepte finden, Lernhilfen für Kinder – alles per Klick.</p>
   </section>
 
-  <section id="lehrer" class="category">
-    <img src="images/lehrer.jpg" alt="KI für Lehrer:innen">
-    <div>
-      <h3>Für Lehrer:innen</h3>
-      <p>Unterrichtsvorbereitung, automatische Bewertung, kreative Arbeitsblätter – mit KI.</p>
-    </div>
+  <section id="lehrer" data-aos="fade-up">
+    <h2>KI für Lehrer:innen</h2>
+    <p>Unterricht vorbereiten, Arbeitsblätter generieren, individuelle Förderung ermöglichen.</p>
   </section>
 
-  <section id="studenten" class="category">
-    <img src="images/studenten.jpg" alt="KI für Studierende">
-    <div>
-      <h3>Für Studierende & Schüler:innen</h3>
-      <p>Zusammenfassungen, Lernpläne, Sprachübungen – Unterstützung rund ums Lernen.</p>
-    </div>
+  <section id="studenten" data-aos="fade-up">
+    <h2>KI für Studierende</h2>
+    <p>Zusammenfassungen, Prüfungsvorbereitung, Recherche – alles einfacher mit KI.</p>
   </section>
 
-  <section id="business" class="category">
-    <img src="images/business.jpg" alt="KI für Unternehmer:innen">
-    <div>
-      <h3>Für Selbstständige & Unternehmer:innen</h3>
-      <p>Texte schreiben, Buchhaltung vereinfachen, Social Media Content generieren.</p>
-    </div>
+  <section id="business" data-aos="fade-up">
+    <h2>KI für Selbstständige</h2>
+    <p>Effizientes Zeitmanagement, Marketingtexte, Kundenkommunikation automatisieren.</p>
   </section>
 
-  <section id="alltag" class="category">
-    <img src="images/alltag.jpg" alt="KI für den Alltag">
-    <div>
-      <h3>Für den Alltag</h3>
-      <p>Haushaltsorganisation, Essensplanung, Zeitmanagement – smarter mit KI.</p>
-    </div>
+  <section id="alltag" data-aos="fade-up">
+    <h2>KI im Alltag</h2>
+    <p>Von der To-do-Liste bis zum Einkauf – KI unterstützt dich bei allem.</p>
   </section>
 
   <footer>
@@ -70,5 +66,9 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
