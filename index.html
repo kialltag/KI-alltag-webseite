@@ -3,111 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KIAlltag – KI für deinen Familienwahnsinn</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Outfit', sans-serif;
-      background: #fefefe;
-      color: #333;
-      overflow-x: hidden;
-    }
-    header {
-      background: url('https://images.unsplash.com/photo-1612197524214-ceddbd6f8b71') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 0 0 8px rgba(0,0,0,0.7);
-    }
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2rem;
-      max-width: 500px;
-      text-align: center;
-      margin: 1rem 0 2rem;
-    }
-    .btn {
-      background: #ff4081;
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background: #e73370;
-    }
-    section {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    section img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 10px;
-      margin: 2rem 0;
-    }
-    footer {
-      background: #222;
-      color: #eee;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-    }
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <title>KI im Alltag</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <h1>KI im Alltag</h1>
+    <nav>
+      <ul>
+        <li><a href="#muetter">Mütter</a></li>
+        <li><a href="#lehrer">Lehrer:innen</a></li>
+        <li><a href="#studenten">Studierende</a></li>
+        <li><a href="#business">Selbstständige</a></li>
+        <li><a href="#alltag">Alltag</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <h1>KIAlltag</h1>
-  <p>Dein smarter Helfer für mehr Ruhe im Familienwahnsinn</p>
-  <a href="#guide"><button class="btn">10 Prompts gratis holen</button></a>
-</header>
+  <section class="hero">
+    <h2>Smarte KI-Tools für deinen Alltag</h2>
+    <p>Effizienter leben mit künstlicher Intelligenz – egal ob im Familienleben, im Klassenzimmer oder im Büro.</p>
+  </section>
 
-<section>
-  <h2>Was kann KI für dich tun?</h2>
-  <p>Keine Ahnung von Technik? Kein Problem. KI hilft dir beim Kochen, Planen, Spielen, und mehr.</p>
-  <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="Familienleben">
-</section>
+  <section id="muetter" class="category">
+    <img src="images/muetter.jpg" alt="KI für Mütter">
+    <div>
+      <h3>Für Mütter & Familien</h3>
+      <p>KI-Tools für Einkaufsplanung, Familienkalender oder kreative Ideen mit Kindern.</p>
+    </div>
+  </section>
 
-<section>
-  <h2>Beispiel-Prompts</h2>
-  <p>Hier ein paar Ideen, wie du sofort starten kannst:</p>
-  <ul style="text-align:left; max-width:600px; margin:2rem auto; list-style:none;">
-    <li>– Erstelle mir einen Essensplan für 5 Tage</li>
-    <li>– Erfinde eine Einschlafgeschichte mit einem Dino</li>
-    <li>– Gib mir Bastelideen für verregnete Nachmittage</li>
-  </ul>
-  <img src="https://images.unsplash.com/photo-1581092919531-7c65ef14ec52" alt="KI">
-</section>
+  <section id="lehrer" class="category">
+    <img src="images/lehrer.jpg" alt="KI für Lehrer:innen">
+    <div>
+      <h3>Für Lehrer:innen</h3>
+      <p>Unterrichtsvorbereitung, automatische Bewertung, kreative Arbeitsblätter – mit KI.</p>
+    </div>
+  </section>
 
-<section id="guide">
-  <h2>Gratis Guide: 10 KI-Prompts für Mamas</h2>
-  <p>Hol dir den kostenlosen PDF-Guide für einen entspannteren Alltag.</p>
-  <a href="https://dein-shop-link.de" target="_blank"><button class="btn">Jetzt downloaden</button></a>
-</section>
+  <section id="studenten" class="category">
+    <img src="images/studenten.jpg" alt="KI für Studierende">
+    <div>
+      <h3>Für Studierende & Schüler:innen</h3>
+      <p>Zusammenfassungen, Lernpläne, Sprachübungen – Unterstützung rund ums Lernen.</p>
+    </div>
+  </section>
 
-<footer>
-  Kontakt: kialltag@proton.me<br/>
-  &copy; 2025 KIAlltag – Für Mütter gemacht
-</footer>
+  <section id="business" class="category">
+    <img src="images/business.jpg" alt="KI für Unternehmer:innen">
+    <div>
+      <h3>Für Selbstständige & Unternehmer:innen</h3>
+      <p>Texte schreiben, Buchhaltung vereinfachen, Social Media Content generieren.</p>
+    </div>
+  </section>
 
+  <section id="alltag" class="category">
+    <img src="images/alltag.jpg" alt="KI für den Alltag">
+    <div>
+      <h3>Für den Alltag</h3>
+      <p>Haushaltsorganisation, Essensplanung, Zeitmanagement – smarter mit KI.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 KI im Alltag</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
