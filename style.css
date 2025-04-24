@@ -61,7 +61,7 @@ nav .nav-links {
 .nav-links a:hover,
 .nav-links .active {
     font-weight: bold;
-    color: #ffd700;
+    color: #87cefa; /* Hellblau statt Gelb */
 }
 
 /* Responsive Navigation (Hamburger) */
@@ -86,16 +86,17 @@ nav .nav-links {
     .nav-links {
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 100%;
         right: 0;
         background-color: rgba(0, 0, 0, 0.95);
         width: 200px;
-        display: none;
+        display: none; /* Menü standardmäßig verstecken */
         padding: 10px;
+        z-index: 999;
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Menü einblenden bei .active */
     }
 
     .nav-links li {
@@ -198,7 +199,7 @@ footer {
 }
 
 footer a {
-    color: #ffd700;
+    color: #87cefa; /* Hellblau im Footer */
     text-decoration: none;
 }
 
