@@ -5,15 +5,16 @@
     box-sizing: border-box;
 }
 
-/* Grundlegende Stile */
+/* Basis */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background: #f4f4f4;
     color: #333;
+    padding-top: 80px; /* für festen Header */
 }
 
-/* Container für alle Inhalte */
+/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -25,11 +26,10 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.85);
     color: white;
     padding: 15px 0;
-    z-index: 999;
-    transition: top 0.3s;
+    z-index: 1000;
 }
 
 header .container {
@@ -38,29 +38,33 @@ header .container {
     align-items: center;
 }
 
-header h1 a {
-    text-decoration: none;
+.logo {
     color: white;
+    text-decoration: none;
     font-size: 24px;
     font-weight: bold;
 }
 
-nav ul {
+nav .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-nav a {
+.nav-links a {
     color: white;
     text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s;
 }
 
-nav ul .active {
+.nav-links a:hover,
+.nav-links .active {
     font-weight: bold;
+    color: #ffd700;
 }
 
-/* Hamburger Menü */
+/* Responsive Navigation (Hamburger) */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -74,16 +78,41 @@ nav ul .active {
     margin: 4px 0;
 }
 
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 200px;
+        display: none;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
 /* Hero Section */
 .hero {
     position: relative;
     height: 100vh;
-    overflow: hidden;
     color: white;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .hero video {
@@ -115,7 +144,7 @@ nav ul .active {
     font-size: 1.5rem;
 }
 
-/* Kategorien */
+/* Kategorien auf Startseite */
 .categories {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -129,6 +158,7 @@ nav ul .active {
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
 }
 
 .category img {
@@ -139,4 +169,39 @@ nav ul .active {
 
 .category h3 {
     font-size: 1.5rem;
-    margin
+    margin: 10px 0 5px;
+}
+
+/* Einzelkategorien auf Unterseiten */
+.category-section {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.category-section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
