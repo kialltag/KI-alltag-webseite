@@ -2,30 +2,84 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KI im Alltag – Startseite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KI im Alltag</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Header -->
   <header>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active nav-index">Startseite</a></li>
-        <li><a href="muetter.html" class="nav-muetter">KI für Mütter</a></li>
-        <li><a href="lehrer.html" class="nav-lehrer">KI für Lehrer:innen</a></li>
-        <li><a href="studenten.html" class="nav-studenten">KI für Studierende</a></li>
-        <li><a href="business.html" class="nav-business">KI für Selbstständige</a></li>
-        <li><a href="alltag.html" class="nav-alltag">KI im Alltag</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1><a href="index.html" class="logo">KI im Alltag</a></h1>
+      <nav>
+        <div class="menu-toggle" id="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Startseite</a></li>
+          <li><a href="muetter.html">KI für Mütter</a></li>
+          <li><a href="lehrer.html">KI für Lehrer:innen</a></li>
+          <li><a href="studenten.html">KI für Studierende</a></li>
+          <li><a href="business.html">KI für Selbstständige</a></li>
+          <li><a href="alltag.html">KI im Alltag</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Logo / Haupttitel -->
-  <main>
-    <h1><a href="index.html" class="logo">KI im Alltag</a></h1>
-    <p>Entdecke, wie Künstliche Intelligenz dein tägliches Leben einfacher macht.</p>
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-up">
+    <div class="overlay"></div>
+    <video autoplay loop muted playsinline>
+      <source src="video.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-text">
+      <h2>Dein smarter KI-Alltag</h2>
+      <p>Mit künstlicher Intelligenz organisierter und entspannter durchs Leben.</p>
+    </div>
+  </section>
 
-    <!--
+  <!-- Kategorien -->
+  <section class="categories">
+    <div class="category" data-aos="fade-up">
+      <img src="images/muetter.jpg" alt="KI für Mütter">
+      <h3><a href="muetter.html">KI für Mütter</a></h3>
+      <p>Organisieren, planen, entspannen – smarte Helfer im Familienalltag.</p>
+    </div>
+    <div class="category" data-aos="fade-up">
+      <img src="images/lehrer.jpg" alt="KI für Lehrer:innen">
+      <h3><a href="lehrer.html">KI für Lehrer:innen</a></h3>
+      <p>Unterrichtsideen, Feedback, Korrekturhilfe – immer einen Schritt voraus.</p>
+    </div>
+    <div class="category" data-aos="fade-up">
+      <img src="images/studenten.jpg" alt="KI für Studierende">
+      <h3><a href="studenten.html">KI für Studierende</a></h3>
+      <p>Zusammenfassen, lernen, reflektieren – effizient durch das Studium.</p>
+    </div>
+    <div class="category" data-aos="fade-up">
+      <img src="images/business.jpg" alt="KI für Selbstständige">
+      <h3><a href="business.html">KI für Selbstständige</a></h3>
+      <p>Marketing, Rechnungen, Organisation – dein smarter Büroassistent.</p>
+    </div>
+    <div class="category" data-aos="fade-up">
+      <img src="images/alltag.jpg" alt="KI im Alltag">
+      <h3><a href="alltag.html">KI im Alltag</a></h3>
+      <p>Von Einkauf bis Kalender – dein digitaler Alltagsbegleiter.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 KI im Alltag | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
