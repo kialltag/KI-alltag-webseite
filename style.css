@@ -1,184 +1,23 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+// Navigation Hervorhebung
+window.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('nav a'); // Alle Navigationslinks holen
+  const path = window.location.pathname; // Den aktuellen Pfad aus der URL holen
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header */
-header {
-    background: #20232a;
-    padding: 10px 0;
-    color: white;
-    text-align: center;
-    position: relative;
-}
-
-header h1 {
-    font-size: 2rem;
-}
-
-/* Navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 5px 10px;
-}
-
-nav a:hover, nav a.active {
-    background-color: #6fa3ef;
-    color: white;
-    border-radius: 5px;
-}
-
-nav a.active {
-    font-weight: bold;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    color: white;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero video {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    z-index: -2;
-}
-
-.hero .overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: -1;
-}
-
-.hero-text {
-    z-index: 1;
-}
-
-/* Kategorien */
-.categories {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.category {
-    width: 32%;
-    text-align: center;
-}
-
-.category img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.category h3 a {
-    text-decoration: none;
-    color: #20232a;
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
-}
-
-.category h3 a:hover {
-    color: #6fa3ef;
-}
-
-.category p {
-    margin-top: 10px;
-}
-
-/* Footer */
-footer {
-    background-color: #20232a;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-footer a {
-    color: #6fa3ef;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;
+  links.forEach(link => {
+    // Entferne die aktive Klasse von allen Links
+    link.classList.remove('active');
+    
+    // Füge die aktive Klasse dem Link hinzu, der der aktuellen Seite entspricht
+    if (path.includes(link.getAttribute('href'))) {
+      link.classList.add('active');
     }
+  });
+});
 
-    section h2 {
-        font-size: 1.2rem;
-    }
+// Hamburger Menü für Mobilgeräte
+const toggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
 
-    footer p {
-        font-size: 1rem;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #20232a;
-        position: absolute;
-        top: 60px;
-        width: 200px;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .categories {
-        flex-direction: column;
-    }
-
-    .category {
-        width: 100%;
-    }
-}
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
