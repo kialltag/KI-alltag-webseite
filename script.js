@@ -18,3 +18,15 @@ const menu = document.getElementById('menu');
 toggle.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
+
+// Modal für Impressum und Datenschutz öffnen
+document.getElementById('open-impressum').addEventListener('click', () => {
+  document.getElementById('impressum-modal').style.display = 'block';
+});
+
+document.getElementById('open-datenschutz').addEventListener('click', () => {
+  document.getElementById('datenschutz-modal').style.display = 'block';
+});
+
+// Modal schließen
+document.getElementById('close-impressum').addEventListener('click', ()
