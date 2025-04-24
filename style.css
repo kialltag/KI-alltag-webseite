@@ -1,4 +1,4 @@
-/* Allgemeine Styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,138 +7,187 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  line-height: 1.6;
+  background: #f4f4f4;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px 0;
+  z-index: 999;
 }
 
 header .container {
-  width: 90%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header h1 {
-  font-size: 2rem;
-}
-
 nav ul {
-  list-style-type: none;
+  list-style: none;
   display: flex;
   gap: 20px;
 }
 
 nav a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  font-size: 1rem;
 }
 
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Hero Section */
 .hero {
   position: relative;
   height: 100vh;
-  background: #333;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -2;
 }
 
-.hero .hero-text {
+.hero .overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 }
 
-.hero h2 {
-  font-size: 3rem;
-}
-
-.hero p {
-  font-size: 1.5rem;
+.hero-text {
+  z-index: 1;
 }
 
 section {
   padding: 80px 20px;
   background: white;
-  text-align: left;
+  text-align: center;
 }
 
-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-section h3 {
-  font-size: 1.8rem;
-  margin-top: 20px;
-}
-
-section p, section ul {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-section ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-/* Neue Styles für Impressum und Datenschutz */
-#impressum, #datenschutz {
+section:nth-child(even) {
   background: #f9f9f9;
 }
 
 footer {
-  background-color: #333;
+  background: #20232a;
   color: white;
   text-align: center;
-  padding: 10px 0;
-  position: relative;
+  padding: 20px;
 }
 
-/* Medienanfragen */
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  color: #aaa;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  section h2 {
-    font-size: 2rem;
-  }
-
-  section h3 {
-    font-size: 1.5rem;
+  .menu-toggle {
+    display: flex;
   }
 
   nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
     display: none;
     flex-direction: column;
-    gap: 10px;
+    background: #20232a;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
   }
 
-  #menu-toggle.active + #menu {
+  nav ul.active {
     display: flex;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+
+  section {
+    padding: 40px 20px;
   }
 }
