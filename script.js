@@ -1,11 +1,20 @@
-// Hamburger Menu Toggle
-document.getElementById('menu-toggle').addEventListener('click', function() {
+// DOM vollständig laden
+document.addEventListener('DOMContentLoaded', function () {
+  // Hamburger Menu Toggle
+  const toggle = document.getElementById('menu-toggle');
   const navLinks = document.querySelector('.nav-links');
-  navLinks.classList.toggle('active');
-});
 
-// AOS (Animation on Scroll) Initialisierung
-AOS.init({
-  duration: 800, // Dauer der Animation
-  easing: 'ease-in-out', // Übergangseffekt
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', function () {
+      navLinks.classList.toggle('active');
+    });
+  }
+
+  // AOS (Animation on Scroll) Initialisierung
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 800, // Dauer der Animation
+      easing: 'ease-in-out', // Übergangseffekt
+    });
+  }
 });
