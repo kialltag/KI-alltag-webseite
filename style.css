@@ -79,27 +79,27 @@ nav .nav-links {
 }
 
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    .nav-links {
+    nav .nav-links {
+        display: none; /* Menü standardmäßig verstecken */
         flex-direction: column;
         position: absolute;
         top: 100%;
         right: 0;
         background-color: rgba(0, 0, 0, 0.95);
         width: 200px;
-        display: none; /* Menü standardmäßig verstecken */
         padding: 10px;
         z-index: 999;
     }
 
-    .nav-links.active {
+    nav .nav-links.active {
         display: flex; /* Menü einblenden bei .active */
     }
 
-    .nav-links li {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav .nav-links li {
         margin: 10px 0;
     }
 }
