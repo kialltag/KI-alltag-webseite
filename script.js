@@ -1,9 +1,11 @@
-// JavaScript für responsives Menü
-document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
+// Hamburger Menu Toggle
+document.getElementById('menu-toggle').addEventListener('click', function() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+});
 
-    menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
+// AOS (Animation on Scroll) Initialisierung
+AOS.init({
+  duration: 800, // Dauer der Animation
+  easing: 'ease-in-out', // Übergangseffekt
 });
