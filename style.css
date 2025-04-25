@@ -188,6 +188,58 @@ nav .nav-links {
     height: auto;
     margin-top: 20px;
 }
+/* Intro / Allgemeine Textabschnitte */
+.intro, .cta {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.intro h2, .cta h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.intro p, .cta p {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Responsive Kategorien-Anzeige */
+.categories2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.category2 {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.category2 h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.category2 p {
+    font-size: 1rem;
+    color: #555;
+}
+
 
 /* Footer */
 footer {
