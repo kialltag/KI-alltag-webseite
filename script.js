@@ -17,4 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
       easing: 'ease-in-out', // Übergangseffekt
     });
   }
+
+  // Verhindert die Weiterleitung, wenn die aktuelle URL bereits die Root-Domain ist
+  if (window.location.pathname === "/index.html") {
+  window.location.href = "https://kialltag.de";
+  }
 });
